@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Clima por ciudad</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>🌤️ Weather App</h1>
+
+            <p>Consulta el clima de cualquier ciudad</p>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="container">
+
+            <div class="buscador">
+
+
+                <input type="text" id="ciudad" placeholder="Escribe una ciudad..." autocomplete="off">
+
+                <button type="button" id="btnBuscar">
+                    Buscar
+                </button>
+
+            </div>
+
+            <p class="mensaje" id="mensaje"></p>
+
+            <article class="weather-card">
+
+                <h2 id="nombreCiudad">📍 Aguascalientes</h2>
+
+                <div class="icono-clima" id="iconoClima">
+                    🌤️
+                </div>
+
+
+                <p class="temperatura" id="temperatura">25 °C</p>
+
+
+                <p class="descripcion" id="descripcion">Parcialmente nublado</p>
+
+
+
+                <div class="detalles">
+
+                    <div class="detalle">
+
+                        <span class="detalle-icono">💧</span>
+
+                        <div>
+                            <p>Humedad</p>
+                            <strong id="humedad">45%</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="detalle">
+
+                        <span class="detalle-icono">💨</span>
+
+                        <div>
+                            <p>Viento</p>
+                            <strong id="viento">12 km/h</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

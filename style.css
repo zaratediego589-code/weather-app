@@ -1,0 +1,195 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f0f4f8;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:500px;
+
+    margin:40px auto;
+
+}
+
+header{
+
+    text-align:center;
+
+    margin-top:40px;
+
+}
+
+.buscador{
+
+    display:flex;
+
+    gap:10px;
+
+    margin:35px 0;
+
+}
+
+input{
+
+    flex:1;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    font-size:16px;
+
+}
+
+button{
+
+    padding:15px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+}
+
+.weather-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+
+}
+
+.temperatura {
+
+    font-size: 64px;
+
+    font-weight: bold;
+
+    margin: 20px 0 10px;
+
+    color: #1e293b;
+
+}
+
+.descripcion {
+
+    font-size: 20px;
+
+    color: #64748b;
+
+    margin-bottom: 30px;
+
+    text-transform: capitalize;
+
+}
+
+.detalles {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+.detalle {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: #f8fafc;
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    text-align: left;
+
+}
+
+.detalle-icono {
+    font-size: 28px;
+}
+
+.detalle p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.detalle strong {
+    font-size: 18px;
+    color: #1e293b;
+}
+
+.weather-card h2 {
+
+    font-size: 28px;
+
+    color: #1e293b;
+
+}
+
+.icono-clima {
+    font-size: 70px;
+    margin: 20px 0 5px;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.mensaje {
+    min-height: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mensaje-error {
+    color: #dc2626;
+}
+
+.mensaje-exito {
+    color: #16a34a;
+}
