@@ -281,10 +281,10 @@ body.clima-despejado-noche {
 /* Nublado */
 body.clima-nublado {
     background: linear-gradient(
-        135deg,
-        #94a3b8,
+        180deg,
+        #124c9e,
         #64748b,
-        #cbd5e1
+        #94a3b8
     );
 }
 
@@ -401,6 +401,34 @@ main {
 
     to {
         transform: translateY(110vh) rotate(360deg);
+    }
+
+}
+
+.nube {
+    position: absolute;
+    left: -220px;
+
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 90px;
+
+    animation-name: moverNube;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    filter: drop-shadow(
+        0 8px 10px rgba(0, 0, 0, 0.12)
+    );
+}
+
+@keyframes moverNube {
+
+    from {
+        transform: translateX(-220px);
+    }
+
+    to {
+        transform: translateX(calc(100vw + 440px));
     }
 
 }

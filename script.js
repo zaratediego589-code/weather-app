@@ -332,6 +332,9 @@ function cambiarFondoClima(codigo, esDia) {
 
     if (codigo >= 1 && codigo <= 3) {
         document.body.classList.add("clima-nublado");
+
+        crearNubes();    
+
         return;
     }
 
@@ -433,6 +436,41 @@ function crearNieve() {
             0.4 + Math.random() * 0.6;
 
         efectoClima.appendChild(copo);
+
+    }
+
+}
+
+function crearNubes() {
+
+    limpiarEfectosClima();
+
+    const cantidadNubes = 6;
+
+    for (let i = 0; i < cantidadNubes; i++) {
+
+        const nube = document.createElement("span");
+
+        nube.classList.add("nube");
+
+        nube.textContent = "☁";
+
+        nube.style.top =
+            5 + Math.random() * 65 + "%";
+
+        nube.style.fontSize =
+            70 + Math.random() * 80 + "px";
+
+        nube.style.animationDuration =
+            18 + Math.random() * 18 + "s";
+
+        nube.style.animationDelay =
+            -Math.random() * 30 + "s";
+
+        nube.style.opacity =
+            0.25 + Math.random() * 0.45;
+
+        efectoClima.appendChild(nube);
 
     }
 
