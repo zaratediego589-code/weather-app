@@ -193,3 +193,215 @@ button:disabled {
 .mensaje-exito {
     color: #16a34a;
 }
+
+.pronostico {
+    margin-top: 30px;
+}
+
+.pronostico h2 {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 20px;
+}
+
+.pronostico-lista {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.pronostico-card {
+    background: white;
+    padding: 18px 10px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.pronostico-dia {
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.pronostico-icono {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.pronostico-temperaturas {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.temp-max {
+    font-weight: bold;
+    color: #1e293b;
+}
+
+.temp-min {
+    color: #64748b;
+}
+
+@media (max-width: 768px) {
+
+    .pronostico-lista {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+body {
+    min-height: 100vh;
+    transition: background 1s ease;
+    background-attachment: fixed;
+}
+
+/* Día despejado */
+body.clima-despejado-dia {
+    background: linear-gradient(
+        135deg,
+        #38bdf8,
+        #60a5fa,
+        #fef3c7
+    );
+}
+
+/* Noche despejada */
+body.clima-despejado-noche {
+    background: linear-gradient(
+        135deg,
+        #020617,
+        #172554,
+        #312e81
+    );
+}
+
+/* Nublado */
+body.clima-nublado {
+    background: linear-gradient(
+        135deg,
+        #94a3b8,
+        #64748b,
+        #cbd5e1
+    );
+}
+
+/* Lluvia */
+body.clima-lluvia {
+    background: linear-gradient(
+        135deg,
+        #1e293b,
+        #334155,
+        #64748b
+    );
+}
+
+/* Tormenta */
+body.clima-tormenta {
+    background: linear-gradient(
+        135deg,
+        #020617,
+        #312e81,
+        #111827
+    );
+}
+
+/* Nieve */
+body.clima-nieve {
+    background: linear-gradient(
+        135deg,
+        #e0f2fe,
+        #f8fafc,
+        #bae6fd
+    );
+}
+
+/* Niebla */
+body.clima-niebla {
+    background: linear-gradient(
+        135deg,
+        #cbd5e1,
+        #e2e8f0,
+        #94a3b8
+    );
+}
+
+header {
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.weather-card,
+.pronostico-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+}
+
+.efecto-clima {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+header,
+main {
+    position: relative;
+    z-index: 1;
+}
+
+.gota {
+    position: absolute;
+    top: -40px;
+
+    width: 2px;
+    height: 28px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    animation-name: caerLluvia;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes caerLluvia {
+
+    from {
+        transform: translateY(-40px);
+    }
+
+    to {
+        transform: translateY(110vh);
+    }
+
+}
+
+.copo {
+    position: absolute;
+    top: -30px;
+
+    color: white;
+    font-size: 20px;
+
+    animation-name: caerNieve;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes caerNieve {
+
+    from {
+        transform: translateY(-30px) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+
+}
+
